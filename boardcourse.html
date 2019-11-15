@@ -1,30 +1,153 @@
 
 <link href="css/boardmain.css" rel="stylesheet" type="text/css">
 <link href="css/course_add.css" rel="stylesheet" type="text/css">
+<link href="css/popup_module.css" rel="stylesheet" type="text/css">
+<link href="css/webtopmenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="resize/plugin.js"></script>
+<script src="jquery/webmenu.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>코스추가</title>
 </head>
 <body>
         <header>
             <div>
                 <nav class="admin_left_nav">
                         <ul class="topmenu">
-                            <li><a  class=line1 href="COMA.html">COMA</a></li>
-                            <li><a  class=line2 href=#>전체메뉴</a></li>
+                            <li id="to_home"><a class="mainline" href="Main.html">COMA</a></li>
                         </ul>
                 </nav>
                 <nav class="admin_right_nav">
-                <ul class="topmenu">
-                        <li><a  class=line1 href=#>내컨텐츠</a></li>
-                        <li><a  class=line1 href=#>참여활동</a></li>
-                        <li><a  class=line2 href=#>닉네임</a></li><!--<%= U_Nicname%>-->
-                </ul>
-            </nav>
+                    					<ul class="topmenu">
+                    <li id="a"><span class="line1">내컨텐츠</span>
+                        <div id="mycontent_submenu" class="submenu layerbox" style="display: none;">
+                            <div class="pin pin_top"></div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="course">
+                                            <span class="inner">코스</span>
+                                            <div class="controls">
+                                                <a class="setting" href="">설정</a>
+                                                <a class="add" href="">추가</a>
+                                            </div>
+                                        </th>
+                                        <th class="module">
+                                            <span class="inner">모듈</span>
+                                            <div class="controls">
+                                                <a class="setting" href="">설정</a>
+                                                <a class="add" href="">추가</a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="course">
+                                            <div id="p_course_nest" class="scrollbox">
+                                                <ul>
+                                                    <li>
+                                                        <a href="">코스1</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td class="module">
+                                            <div id="p_module_nest" class="scrollbox">
+                                                <div class="divider">소유중인 모듈</div>
+                                                <menu class="menu3">
+                    <li>
+                        <a href="">모듈 2</a>
+                    </li>
+                    <li>
+                        <a href="">모듈 2</a>
+                    </li>
+                    </menu>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+</div>
+</li>
+<li id="b"><span class="line1" href=#>참여활동</span>
+    <div id="act_submenu" class="submenu layerbox" style="display: none;">
+        <div class="pin pin_top"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="study">
+                        <span class="inner">공동공부</span>
+                    </th>
+                    <th class=marking>
+                        <span class="inner">봤어요</span>
+                        <span class="subtitle">
+                            누적봤어요 <span class="count">1</span>번
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="study">
+                        <div id="p_study_nest" class="scrollbox">
+                            <menu class="menu">
+<li>
+    <a href="#">듣고있는 것</a>
+    <div class="archieved">
+        <span class="percentage">&nbsp; 15%</span>
+        <span class="graph">
+            <span class="bar" style="width: 15%;"></span>
+        </span>
+    </div>
+</li>
+<li>
+    <a href="#">듣고있는 것</a>
+    <div class="archieved">
+        <span class="percentage">50%</span>
+        <span class="graph">
+            <span class="bar" style="width: 50%;"></span>
+        </span>
+    </div>
+</li>
+</menu>
+</div>
+</td>
+<td class="marking">
+    <div id="p_marking_nest" class=scrollbox>
+        <menu class="menu2">
+            <li>
+                <a href="#">듣고있는것의 코스이름</a>
+            </li>
+            <li>
+                <a href="#">듣고있는것의 코스이름</a>
+            </li>
+        </menu>
+    </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li id="c"><span class="line2" href=#>닉네임</span>
+    <div id="niName_submenu" class="submenu layerbox" style="display:none;">
+        <div class="pin pin_top"></div>
+        <div class="table">
+            <menu>
+<li><a href="boardtopicmain.html">관리자</a></li>
+<li><a href="#">로그아웃</a></li>
+</menu>
+</div>
+</div>
+</li>
+</ul>
+</nav>
         </div>
         </header >
         <div id=contant>
@@ -106,7 +229,10 @@
                         <label>모듈에 연결</label>
                 </dt>
                 <dd class="dd2">
-                       <a class="module" href="#">모듈 연결</a>
+                       <a class="module" href="#module_popup">모듈 연결</a>
+                       <a id="current_module_link" href="#">건택된 이름</a>
+                       <span id="module_connect_status"> 에 연결되었습니다.</span>
+
                     </dd>
             </dl>
             <div class="btn_select">
@@ -115,11 +241,73 @@
                     <button type="button" class="btn" id="delete" >삭제</button>
                 </div>
             </div>
-                
             </section>
-        
-                    
-                
             </article>
+<!--모듈에  연결-->
+<div class="popup" id="module_popup" style="width: 700px; height: 500px; left: 200px; display: none;">
+    <div class="popup_wrapper">
+        <div class="header" >
+            <strong>모듈 연결</strong>
+        </div>
+        <div class="body">
+            <div class="list_sel">
+                    <select class="list_sel1">
+                            <option>내 모듈</option>
+                            <option>전체</option>
+                        </select>
+                    <input class="list_text" type="text" placeholder="모듈을 검색하세요">
+                    </div>
+                <div class="module_list">
+                    <div class="scroll_wrapper scrollbox">
+                        <ol>
+                            <li class="selected">
+                                <a href="">
+                                    <span>모듈이름1</span>
+                                    <span>(2)</span>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="">
+                                        <span>모듈이름2</span>
+                                        <span>(4)</span><!--개수 -->
+                                    </a>
+                                </li>
+                        </ol>
+                    </div>
+                    </div>
+                <div class="module_view">
+                    <div id="module_previewer">
+                         <span class="empty">모듈을 연결하세요</span>  <!-- 선택하지 않았을 때-->
+                      <!--  <div class="full">
+                        <strong>
+                            <a href="" target="_blank">선택된 코스이름</a></strong>
+                            <ul>
+                                <li>
+                                    <img src="" width="38" height="38" alt>
+                                </li>
+                                <li>생성일 : 
+                                    <time>2019-11-11</time>
+                                   
+                                    <li> &emsp;토픽수 : 2개 </li>
+                                </li>
+                                <li>생산자 : 숩</li>
+                            </ul>
+                            <input type="hidden" name="module_id_to_connect" value="4371"> /*모듈의 인덱스 번호 넣기*/
+                            <input type="hidden" name="module_title_to_connect" value="코스!!!">
+                            <summary>sdsdssㅇㅇㄸ</summary>
+                        </div> -->
+                        </div> 
+                        <form class="tail" method="post" action="" >
+                            <button class="submit btn1" disabled="disabled">연결하기</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+            <div class="foot">
+				<button class="close">닫기</button>
+			</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

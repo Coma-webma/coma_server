@@ -1,6 +1,6 @@
 <link href="css/boardmain.css" rel="stylesheet" type="text/css">
-<link href="css/boardtopicmain.css" rel="stylesheet" type="text/css">
-<link href="css/topic_add.css" rel="stylesheet" type="text/css">
+<link href="css/module_add.css" rel="stylesheet" type="text/css">
+<link href="css/module.css" rel="stylesheet" type="text/css">
 <link href="css/popup_module.css" rel="stylesheet" type="text/css">
 <link href="css/webtopmenu.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
@@ -12,7 +12,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>모듈이름 /토픽목록</title><!-- <%=모듈의 이름 %>-->
+    <title>모듈 전체</title><!-- <%=모듈의 이름 %>-->
 </head>
 
 <body>
@@ -165,7 +165,7 @@
                     <li class="menu_all_add">
                         <p>전체 모듈 목록</p>
                     </li>
-                    <button class="button1"><a href="boardtopic.html" style="color: white">추가</a></button>
+                    <button class="button1"><a href="boardmodule.html" style="color: white">추가</a></button>
                     <select class="sel" name="latest">
                         <option value="low">최신순</option>
                         <option value="low">내림차순</option>
@@ -174,93 +174,84 @@
                 </ul>
                 <nav id="main_bar">
                     <ul class="main_bar_all">
-                        <a href="boardtopicmain.html">
+                        <a href="boardmodulemodify.html" class="a1">
                             <li>모듈1</li>
                         </a>
-                        <a href="boardtopicmain.html">
+                        <a href="boardmodulemodify.html" class="a1">
                             <li>모듈2</li>
                         </a>
-                        <a href="boardtopicmain.html">
+                        <a href="boardmodulemodify.html" class="a1">
                             <li>모듈3</li>
                         </a>
-                        <a href="boardtopicmain.html">
+                        <a href="boardmodulemodify.html" class="a1">
                             <li>모듈4</li>
                         </a>
                     </ul>
                 </nav>
         </div><!-- 관리자모드 메인 -->
         <article>
-            <fieldset id="functions">
-                <ul>
-                    <li>
-                        <input type="radio" id="function_basic" name="function" value>
-                        <label for="function_basic"><a href="boardmodulemodify.html" style="color:black">커버</a></label>
-                    </li>
-                    <li>
-                        <label for="function_topic"><a href="boardtopicmain.html" style="color:black">토픽목록</a></label>
-                    </li>
-                </ul>
-            </fieldset>
             <hgroup id="img1">
-                <h2>모듈이름 > 토픽목록</h2><!-- 모듈이름 추가-->
+                <h2>모듈 전체</h2>
             </hgroup>
-            <section>
-                <div class="select">
-                    선택된 항목을
+            <div class="a9">
+                <p class="a10">선택된 항목을
                     <select>
                         <option value="top">선택한 항목에 대한 작업</option>
                         <option value="low">공개</option>
                         <option value="up">비공개</option>
                     </select>
-                    <div class="make">
-                        <a href="#" style="color:white">토픽만들기</a>
-                    </div>
-                </div>
-                <table class="a12">
-                    <thead>
-                        <tr>
-                            <th class="chk"><input type="checkbox"></th>
-                            <th class="detail">토픽명</th>
-                            <th class="public1">상태</th>
-                            <th class="public1">공개</th>
-                            <th class="date">날짜</th>
-                            <th class="del">삭제</th>
-                        </tr>
-                    </thead>
-                    <tbody class="border1">
-                        <tr>
-                            <td class="chk"><input type="checkbox"></td>
-                            <td class="detail"><a href="boardtopicmodify.html"><strong>토픽1</strong></a></td>
-                            <td class="public1">●</td>
-                            <th class="public1">●</th>
-                            <td class="date">2019-10-30</td>
-                            <th class="del">삭제</th>
-                        </tr>
-                        <tr>
-                            <td class="chk"><input type="checkbox"></td>
-                            <td class="detail"><a href="boardtopicmodify.html"><strong>토픽2</strong></a></td>
-                            <td class="public1">●</td>
-                            <th class="public1">●</th>
-                            <td class="date">2019-10-30</td>
-                            <th class="del">삭제</th>
-                        </tr>
-                        <tr>
-                            <td class="chk"><input type="checkbox"></td>
-                            <td class="detail"><a href="boardtopicmodify.html"><strong>토픽3</strong></a></td>
-                            <td class="public1">●</td>
-                            <th class="public1">●</th>
-                            <td class="date">2019-10-30</td>
-                            <th class="del">삭제</th>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="buttons">
-                    <div class="inner">
-                        <a href="" id="module_seemore">더보기</a>
-                    </div>
-                </div>
-            </section>
+                </p>
+                <p class="a11">
+                    <label><input type="checkbox" value="공개" checked>공개</label>
+                    <label><input type="checkbox" value="비공개" checked>비공개</label>
+                </p>
+            </div>
+            <table class="a12">
+                <thead>
+                    <tr>
+                        <th class="chk"><input type="checkbox"></th>
+                        <th class="main_img">대표이미지</th>
+                        <th class="detail">모듈명</th>
+                        <th class="topic">토픽수</th>
+                        <th class="public">공개</th>
+                        <th class="date">최종변경일</th>
+                    </tr>
+                </thead>
+                <tbody class="border1">
+                    <tr>
+                        <td class="chk"><input type="checkbox"></td>
+                        <td class="main_img">대표이미지</td>
+                        <td class="detail"><a href="boardmodulemodify.html"><strong>모듈1</strong></a></td>
+                        <td class="topic">2</td>
+                        <td class="public">●</td>
+                        <td class="date">2019-10-30</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox"></td>
+                        <td class="main_img">대표이미지</td>
+                        <td class="detail"><a href="boardmodulemodify.html"><strong>모듈2</strong></a></td>
+                        <td class="topic">1</td>
+                        <td class="public">●</td>
+                        <td class="date">2019-10-30</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox"></td>
+                        <td class="main_img">대표이미지</td>
+                        <td class="detail"><a href="boardmodulemodify.html"><strong>모듈3</strong></a></td>
+                        <td class="topic">3</td>
+                        <td class="public">○</td>
+                        <td class="date">2019-10-30</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox"></td>
+                        <td class="main_img">대표이미지</td>
+                        <td class="detail"><a href="boardmodulemodify.html"><strong>모듈4</strong></a></td>
+                        <td class="topic">2</td>
+                        <td class="public">●</td>
+                        <td class="date">2019-10-30</td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
 </body>
-
 </html>
