@@ -40,12 +40,13 @@ ul{
     left:10px;
     top:0;
     font-size: 12px;
-    padding-left: 7px;
+    padding-left: 5px;
     z-index: 1000;
 }
 #to_home{
     padding-right: .5em;
     font-size: 1.1em;
+    margin-top: .9em;
 }
 #left_nav #to_home a{
     color: #ccc;
@@ -64,7 +65,7 @@ ul{
     line-height: 12px;
     margin: 0 auto;
     position: relative;
-    width:470px;
+    width:400px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 .entry-area{
@@ -91,27 +92,43 @@ form{
 }
 strong{
     color:#000;
-    font-size: 12px;
+    font-size: 1em;
+}
+.rememberme{
+    float: right;
+    padding-right: 10px;
+    margin: 0;
 }
 .body{
     padding: 20px;
     border-bottom: 1px solid #ddd;
-    text-align: center;
+    border-top: 1px solid #ddd;
 }
-.label{
-    font-size: 13px;
+dl{
+    padding: 0 10px;
+    text-align: left;
+    margin: 0;
+}
+dt{
+    text-align: left;
+    font-size: 11px;
+    margin: 15px 0 5px;
+    line-height: 11px;
+}
+dd{
+    text-align: left;
+    margin: 0;
+}
+label{
     color: #999999;
-    margin-bottom: 15px;
 }
 input.text{
     width: 320px;
     margin-right: auto;
     padding: 5px;
-    font-size: 1.2em;
+    font-size: 12px;
     height: 30px;
     line-height: 30px;
-    font-size: 14px;
-    color: #999;
 }
 p{
     display: block;
@@ -137,7 +154,6 @@ p{
     font-size: 14px;
     padding: 20px 20px 20px 20px;
     text-align: center;
-    text-decoration: none;
 }
 .a{
     color: #666 !important;
@@ -145,10 +161,4 @@ p{
     font-size: 14px;
     margin: 0 3px;
     text-decoration: none;
-}
-.body1 {
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    vertical-align: baseline;
-    
 }

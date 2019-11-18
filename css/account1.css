@@ -17,36 +17,17 @@ a {
 text-decoration: none;
 color:#ccc;
 }
-a.mainline {
-color:#ccc;
-}
-li {
-    list-style-type: none;
-}
-span.line1{
-    border-right: 1px solid #5f7b97;
-    position: relative;
-    padding: 0px 20px;
-    color:#ccc;
-}
-span.line2{
-    position: relative;
-    padding: 0px 20px;
-    color:#ccc;
-}
-nav span:hover{
-    color: white;
-    cursor: pointer;
-}
-    a.mainline:hover{
-    color: white;
-    cursor: pointer;
-}
-    a.mainline{
-    position: relative;
-    padding: 0px 20px 0px 40px;
-}
+a.line1{
+border-right: 1px solid #5f7b97;
+position: relative;
+padding: 0px 20px;
 
+}
+a.line2{
+position: relative;
+padding: 0px 20px;
+
+}
 header div nav ul.topmenu{
 margin-top: 5px;
 font-size: 14px;
@@ -140,13 +121,13 @@ li a.active span{
 color: #3c9 ;
 }
 select.sel{
-    background-color: #bbb;
-    color: white;
-    border: none;
-    font-size: 13.5px;
-    margin: 13px 0px 0px 0px;
-    padding: 3px;
-    width: 70px;
+ background-color: #bbb;
+ color: white;
+ border: none;
+ font-size: 13.5px;
+ margin: 13px 0px 0px 0px;
+ padding: 3px;
+ width: 70px;
 }
 li a:hover:not(.active) {
 color: white;

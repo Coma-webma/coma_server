@@ -64,7 +64,7 @@ ul{
     line-height: 12px;
     margin: 0 auto;
     position: relative;
-    width:470px;
+    width:400px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 .entry-area{
@@ -91,17 +91,34 @@ form{
 }
 strong{
     color:#000;
-    font-size: 12px;
+    font-size: 1em;
+}
+.rememberme{
+    float: right;
+    padding-right: 10px;
+    margin: 0;
 }
 .body{
     padding: 20px;
     border-bottom: 1px solid #ddd;
-    text-align: center;
 }
-.label{
-    font-size: 13px;
+dl{
+    padding: 0 10px;
+    text-align: left;
+    margin: 0;
+}
+dt{
+    text-align: left;
+    font-size: 11px;
+    margin: 15px 0 5px;
+    line-height: 11px;
+}
+dd{
+    text-align: left;
+    margin: 0;
+}
+label{
     color: #999999;
-    margin-bottom: 15px;
 }
 input.text{
     width: 320px;
@@ -110,8 +127,6 @@ input.text{
     font-size: 1.2em;
     height: 30px;
     line-height: 30px;
-    font-size: 14px;
-    color: #999;
 }
 p{
     display: block;
@@ -137,7 +152,6 @@ p{
     font-size: 14px;
     padding: 20px 20px 20px 20px;
     text-align: center;
-    text-decoration: none;
 }
 .a{
     color: #666 !important;
@@ -146,9 +160,37 @@ p{
     margin: 0 3px;
     text-decoration: none;
 }
-.body1 {
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    vertical-align: baseline;
-    
+/*로그인 실패 시 다이얼로그창 css부분*/
+div.fail_login{/*다이얼로그창*/
+    background-color: #666;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+div.fail_login_head{
+    height: 35px;
+    visibility: hidden;
+}
+div.fail_login_body{
+    font-size: 14px;
+    line-height: 1.5em;
+    margin: 0 60px;
+    text-align: left;
+}
+div.fail_login_foot{
+    margin: 10px 0 0 0 !important;
+    padding: 25px 0;
+    text-align: center !important;
+}
+button.fail_login_close{
+    background-color: #6d6d6d;
+    color: #fff;
+    border: none !important;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    margin: 0 .2em;
+    cursor: pointer;
 }
